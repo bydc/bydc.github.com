@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bydc.github.io</id>
     <title>花花</title>
-    <updated>2020-12-05T09:10:04.333Z</updated>
+    <updated>2020-12-05T11:49:47.928Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bydc.github.io"/>
     <link rel="self" href="https://bydc.github.io/atom.xml"/>
@@ -10,4 +10,37 @@
     <logo>https://bydc.github.io/images/avatar.png</logo>
     <icon>https://bydc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 花花</rights>
+    <entry>
+        <title type="html"><![CDATA[NOIP2020 游记]]></title>
+        <id>https://bydc.github.io/post/noip2020-you-ji/</id>
+        <link href="https://bydc.github.io/post/noip2020-you-ji/">
+        </link>
+        <updated>2020-12-05T09:13:50.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="背景">背景</h2>
+<p>csp-s得分单调非降，写错俩 <code>freopen</code> 身败名裂，考前慌的一逼。跟很多外省的朋友聊了天，发现大家也没做什么准备心情舒缓了一点，8点多就睡觉了，然而第二天起来还是很困。</p>
+<h2 id="考试过程">考试过程</h2>
+<p>提前13min到了，结果发大家早就到了，本来打算悄悄板子结果刚刚来就发题了qaq<br>
+第一题是个印象里是个mjy讲过的原题，导致没仔细看<code>入度为0</code>与<code>编号属于[1,m]</code>并不等价，虽然出题人说不会卡就是了。以后还是要注意读题啊。   写T1的过程很自闭，因为平时写的时候c++11语法用的很多，写的畏畏缩缩很多语法都不敢用，中间还CE了好一阵子，差不多1h过了大样例，感觉自己状态很不在线。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="背景">背景</h2>
+<p>csp-s得分单调非降，写错俩 <code>freopen</code> 身败名裂，考前慌的一逼。跟很多外省的朋友聊了天，发现大家也没做什么准备心情舒缓了一点，8点多就睡觉了，然而第二天起来还是很困。</p>
+<h2 id="考试过程">考试过程</h2>
+<p>提前13min到了，结果发大家早就到了，本来打算悄悄板子结果刚刚来就发题了qaq<br>
+第一题是个印象里是个mjy讲过的原题，导致没仔细看<code>入度为0</code>与<code>编号属于[1,m]</code>并不等价，虽然出题人说不会卡就是了。以后还是要注意读题啊。   写T1的过程很自闭，因为平时写的时候c++11语法用的很多，写的畏畏缩缩很多语法都不敢用，中间还CE了好一阵子，差不多1h过了大样例，感觉自己状态很不在线。</p>
+<!-- more -->
+<p>T2看了一眼大概会了个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>+</mo><mn>26</mn><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n \log{n}+26n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">6</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 做法，看了一眼数据范围<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi>e</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">1e6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathdefault">e</span><span class="mord">6</span></span></span></span>还多测感觉过不了，想了会儿线性做法无果。此时 1.5h，不会 noip t2还挺自闭的。</p>
+<!-- more -->
+<p>看了T3，感觉出一个做法还挺对，大概就是没轮选一个颜色换来换去。写的好恶心就用了很久（<s>当时为了能写出来，简化了一个很复杂的计算颜色的权值函数，埋雷</s>），手测第二个样例发现自己做法假了。于是开始手玩第二个样例发现每轮可能会选很多个颜色，不过总操作数大概是对的，于是就改改改。发现checker用了c++11的语法于是我直接把check改了，但由于运行的时候没有加<code>./</code>就一直运行不了，甚至还向ccf反馈了这个问题，一度以为是自己改错了checker，于是放弃T3。</p>
+<!-- more -->
+<p>这个时候是3h15min，出于对自己做法的自信（忘了那个函数了），就去写B题的暴力，过程中发现我开场状态奇差的时候写下过一行<code>#define per(i,r,l) for(int i=(r);r&gt;=(l);i--)</code>。写的过程中一位老师第一次给我的反馈是“技术问题”，第二次的反馈是“你没加./”。恍然大悟后发现程序没有输出操作数，改后样例3仍然过不去，调了很久意识到那个不完整的函数，但时间只剩20min了。</p>
+<!-- more -->
+<p>很快rush完D的暴力以后，尝试写一个更优一点的暴力，写的时候意识到我原本的暴力没有判-1，稍微犹豫后选择改原本的暴力，最后2min的时候提交了D题</p>
+<!-- more -->
+<p>精彩才刚刚开始，我隐隐约约的感觉我没交改过C于是我看了一眼C的代码，果然没有，此时我有的唯一一版C的代码是调试样例三时用到的，freopen和调试信息都错误的代码，当时慌的一逼。先交一发当前有的代码，刚想测测样例发现freopen写错了，于是改了freopen交了一发，再改代码，再测的时候发现有调试信息，于是再删掉调试信息后再交了一发。大改是最后10s交了最后一版，最后也没时间测试答案是否正确有没有没删干净的调试信息了。总之，全程手在抖，2min交了3发。目前还没有拿到代码，希望人没事。</p>
+<h2 id="后记">后记</h2>
+<p>考完出来手抖了很久，很惊心动魄就是了。但回顾整场，前期题以及T3的假做法浪费了大量时间，导致T3的至今不清楚正确与否的做法没有改出来，T4的暴力大概也只有30。<br>
+个人认为上t4是比t3更可做、分数段更均匀的题，目测身边很多人的T4得分也比T3要高。<br>
+比起noi考场上day2t1愣了很久没想写乱搞，这次noip也算是利用上了每一分钟吧。</p>
+]]></content>
+    </entry>
 </feed>
