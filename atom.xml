@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bydc.github.io</id>
     <title>花花</title>
-    <updated>2020-12-05T11:50:27.611Z</updated>
+    <updated>2020-12-05T11:52:58.040Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bydc.github.io"/>
     <link rel="self" href="https://bydc.github.io/atom.xml"/>
@@ -39,6 +39,7 @@
 <p>精彩才刚刚开始，我隐隐约约的感觉我没交改过C于是我看了一眼C的代码，果然没有，此时我有的唯一一版C的代码是调试样例三时用到的，freopen和调试信息都错误的代码，当时慌的一逼。先交一发当前有的代码，刚想测测样例发现freopen写错了，于是改了freopen交了一发，再改代码，再测的时候发现有调试信息，于是再删掉调试信息后再交了一发。大改是最后10s交了最后一版，最后也没时间测试答案是否正确有没有没删干净的调试信息了。总之，全程手在抖，2min交了3发。目前还没有拿到代码，希望人没事。</p>
 <h2 id="后记">后记</h2>
 <p>考完出来手抖了很久，很惊心动魄就是了。但回顾整场，前期题以及T3的假做法浪费了大量时间，导致T3的至今不清楚正确与否的做法没有改出来，T4的暴力大概也只有30。<br>
+考完发现很多人T2写的都是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>+</mo><mn>26</mn><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n \log{n}+26n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">6</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，一些人极限数据能跑过一些人跑不过。<br>
 个人认为上t4是比t3更可做、分数段更均匀的题，目测身边很多人的T4得分也比T3要高。<br>
 比起noi考场上day2t1愣了很久没想写乱搞，这次noip也算是利用上了每一分钟吧。</p>
 ]]></content>
