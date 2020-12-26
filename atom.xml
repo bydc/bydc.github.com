@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bydc.github.io</id>
     <title>花花</title>
-    <updated>2020-12-20T09:57:34.205Z</updated>
+    <updated>2020-12-26T11:15:26.608Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bydc.github.io"/>
     <link rel="self" href="https://bydc.github.io/atom.xml"/>
@@ -165,7 +165,7 @@ struct Segment{
 	#undef rs
 }t[2];
 int main(){
-	//freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
 	read(n),read(m);
 	rep(i,1,n) read(a[i].x),read(a[i].y),Map[{a[i].x,a[i].y}]=1;
 	sort(a+1,a+n+1,cmp);
@@ -173,7 +173,7 @@ int main(){
 	t[0].build(1,1,n,0),t[1].build(1,1,n,1);
 	int delta=0;S.push_back(-1),T.push_back(-1);
 	rep(i,1,n) {
-		int pos=n-(lower_bound(all(Set),delta)-Set.begin());
+		int pos=n-(lower_bound(all(Set),delta)-Set.begin())+1;
 		pii lans=t[0].query(1,1,n,1,pos-1),rans=t[1].query(1,1,n,pos,n);
 		lans.fi-=t[0].tag,rans.fi-=t[1].tag;
 		pii Min=min(lans,rans);
