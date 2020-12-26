@@ -8,7 +8,7 @@
 <meta name="description" content="qaq">
 <meta name="theme-color" content="#212529">
 <title>IOI2020集训队作业 | 花花</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1608981321203">
+<link rel="shortcut icon" href="/favicon.ico?v=1608988930114">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
@@ -211,6 +211,7 @@
 <li><a href="#cf506c-mr-kitayuta-vs-bamboos">CF506C Mr. Kitayuta vs. Bamboos</a></li>
 <li><a href="#agc032e-modulo-pairing">AGC032E Modulo Pairing</a></li>
 <li><a href="#at3955-agc023d-go-home">AT3955 [AGC023D] Go Home</a></li>
+<li><a href="#cf576d-flights-for-regular-customers">CF576D Flights for Regular Customers</a></li>
 </ul>
 </li>
 </ul>
@@ -482,12 +483,12 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>36分钟</span>
+      <span>41分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>6255<span class="pc-show">字数</span></span>
+      <span>7066<span class="pc-show">字数</span></span>
     </span>
     
   </div>
@@ -1261,6 +1262,103 @@ int main(){
 	return 0;
 }
 
+</code></pre>
+<h3 id="cf576d-flights-for-regular-customers">CF576D Flights for Regular Customers</h3>
+<ul>
+<li>题意：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>个点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>条边的无向图，每条边有一个限制<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>表示至少已经走了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>条边后才能走这条边，可以重复走一条边，求从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>最少需要走多少条边，或者无法达到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>。</li>
+<li>数据范围：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo>≤</mo><mn>150</mn><mo separator="true">,</mo><msub><mi>d</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">n,m \le 150, d_i \le 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></li>
+<li>题解：考虑从小到大一次加入一条边，用一个矩阵维护当前可以边集，一个矩阵维护当前可到的点集，矩阵快速幂即可求出任意时刻能到哪里，枚举答案显然不优，考虑每次新加入一条边，都求出来加入这条新边时（即时间为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">d_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>）可以到达的位置，根据当前的边集在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mi>f</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">bfs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span></span></span></span>一遍，求出到达<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>所需的时间。</li>
+</ul>
+<pre><code class="language-cpp">/*mjytxdy!*/
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define pb push_back
+#define fi first
+#define se second
+#define all(x) x.begin(),x.end()
+#define SZ(x) ((int)x.size())
+#define pii pair&lt;int,int&gt;
+#define pil pair&lt;int,ll&gt;
+#define pli pair&lt;ll,int&gt;
+#define pll pair&lt;ll,ll&gt;
+#define inl inline
+#define rep(i,l,r) for(int i=(l);i&lt;=(r);i++)
+#define per(i,r,l) for(int i=(r);i&gt;=(l);i--)
+#define trv(i,u) for(int i=head[u];i;i=e[i].next)
+#define lb(x) ((x)&amp;(-(x)))
+#define debug(x) cout&lt;&lt;#x&quot;:&quot;&lt;&lt;x&lt;&lt;'\n'
+#define myput puts(&quot;QaQ&quot;)
+#define file(x) freopen(#x&quot;.in&quot;,&quot;r&quot;,stdin),freopen(#x&quot;.out&quot;,&quot;w&quot;,stdout);
+typedef long long ll;
+template&lt;class T&gt;inl bool ylmin(T &amp;a,T b){return a&lt;b?0:(a=b,1);}
+template&lt;class T&gt;inl bool ylmax(T &amp;a,T b){return a&gt;b?0:(a=b,1);}
+template&lt;class T&gt;inl T abs(T x){return x&lt;0?-x:x;}
+inl char read(){
+	static const int IO_LEN=1024*1024;
+	static char buf[IO_LEN],*ioh,*iot;
+	if(ioh==iot){
+		iot=(ioh=buf)+fread(buf,1,IO_LEN,stdin);
+		if(ioh==iot) return -1;
+	}
+	return *ioh++;
+}
+template&lt;class T&gt;inl void read(T &amp;x){
+	static int iosig;static char ioc;
+	for(iosig=0,ioc=read();!isdigit(ioc);ioc=read()) if(ioc=='-') iosig=1;
+	for(x=0;isdigit(ioc);ioc=read())x=(x&lt;&lt;1)+(x&lt;&lt;3)+(ioc^'0');
+	if(iosig) x=-x;
+}
+const int MAXN = 155;
+const int inf = 2e9;
+int n,m,u[MAXN],v[MAXN],d[MAXN],id[MAXN],dep[MAXN];
+struct Matrix{
+	bitset&lt;MAXN&gt; a[MAXN];
+	Matrix(int type=0){rep(i,1,n) rep(j,1,n) a[i][j]=(type &amp;&amp; i==j);}
+	inl friend Matrix operator * (Matrix x,Matrix y) {
+		Matrix ans;
+		rep(i,1,n) rep(j,1,n) if(x.a[i][j]) ans.a[i]|=y.a[j];
+		return ans;
+	}
+	inl void print() {
+		rep(i,1,n) rep(j,1,n) cout&lt;&lt;a[i][j]&lt;&lt;&quot; \n&quot;[j==n];
+	}
+}nw,edge;
+inl bool cmp(int x,int y){
+	return d[x]&lt;d[y];
+}
+inl Matrix Pow(Matrix a,int b){
+	Matrix ans(1);
+	for(;b;b&gt;&gt;=1,a=a*a) if(b&amp;1) ans=ans*a;
+	return ans;
+}
+inl ll bfs(){
+	queue&lt;int&gt; Q;
+	rep(i,1,n) if(nw.a[1][i]) dep[i]=0,Q.push(i); else dep[i]=inf;
+	while(!Q.empty()){
+		int u=Q.front();Q.pop();
+		rep(i,1,n) if(edge.a[u][i] &amp;&amp; dep[i]==inf){
+			dep[i]=dep[u]+1;
+			Q.push(i);
+		}
+	}
+	return dep[n];
+}
+int main(){
+	freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+	read(n),read(m);
+	rep(i,1,m) read(u[i]),read(v[i]),read(d[i]),id[i]=i;
+	sort(id+1,id+m+1,cmp);
+	nw.a[1][1]=1;ll ans=inf;
+	rep(i,1,m) {
+		int len=d[id[i]]-d[id[i-1]];
+		nw=nw*Pow(edge,len);
+		edge.a[u[id[i]]][v[id[i]]]=1;
+		ylmin(ans,d[id[i]]+bfs());
+	}
+	if(ans==inf) puts(&quot;Impossible&quot;);
+	else printf(&quot;%d\n&quot;,ans);
+	return 0;
+}
 </code></pre>
 
               </div>
